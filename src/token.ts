@@ -7,10 +7,13 @@ export enum TokenType {
     IDIV = 'IDIV',
     MOV = 'MOV',
     COMMA = 'COMMA',
+    JUMP = 'JUMP',
     EOF = 'EOF',
     REGISTER = 'REGISTER',
     INVALID = 'INVALID',
     VALUE = 'VALUE',
+    LABEL = 'LABEL',
+    INT = 'INT',
 }
 
 // 32 bit to 8 bit registers
@@ -21,6 +24,8 @@ export const registers = [
     'si', 'di', 'sp', 'bp',
     'al', 'bl', 'cl', 'dl',
     'ah', 'bh', 'ch', 'dh',
+    'cs', 'ds', 'es', 'ss',
+    'pc'
 ]
 
 export class Token {
